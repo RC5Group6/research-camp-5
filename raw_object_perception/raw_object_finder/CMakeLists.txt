@@ -48,7 +48,7 @@ rosbuild_add_library(raw_object_segmentation
 	common/src/toolbox_ros.cpp
 )
 
-target_link_libraries(object_segmentation 
+target_link_libraries(object_segmentation_node 
 	raw_object_segmentation
 	brics3d_world_model
 	brics3d_util
