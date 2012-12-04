@@ -54,12 +54,12 @@ class detect_object(smach.State):
             output_keys=['object_list'])
         
         #self.object_finder_srv = rospy.ServiceProxy('/raw_perception/object_segmentation/get_segmented_objects', raw_srvs.srv.GetObjects)
-        self.scene_object_finder_srv = rospy.ServiceProxy('/raw_perception/object_segmentation/get_scene_objects', GetSceneObjects)
+        self.scene_object_finder_srv = rospy.ServiceProxy('/get_scene_objects', GetSceneObjects)
 
     def execute(self, userdata):     
         #get object pose list
         #rospy.wait_for_service('/raw_perception/object_segmentation/get_segmented_objects', 30)
-	rospy.wait_for_service('/raw_perception/object_segmentation/get_scene_objects', 30)
+	rospy.wait_for_service('/get_scene_objects', 30)
 
         for i in range(10): 
             print "find object try: ", i
