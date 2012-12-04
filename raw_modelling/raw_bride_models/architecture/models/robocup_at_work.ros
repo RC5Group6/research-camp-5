@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ros:Architecture xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ros="http://ros/1.0">
+  <packages href="../../component_models/models/amcl.ros_package#/"/>
+  <packages href="../../component_models/models/arm_kinematics_constraint_aware.ros_package#/"/>
+  <packages href="../../component_models/models/planning_environment.ros_package#/"/>
+  <packages href="../../component_models/models/hokuyo_node.ros_package#/"/>
+  <packages href="../../component_models/models/map_server.ros_package#/"/>
+  <packages href="../../component_models/models/openni_camera.ros_package#/"/>
+  <packages href="../../component_models/models/raw_2dnav.ros_package#/"/>
+  <packages href="../../component_models/models/raw_arm_navigation.ros_package#/"/>
+  <packages href="../../component_models/models/raw_base_placement.ros_package#/"/>
+  <packages href="../../component_models/models/raw_object_finder.ros_package#/"/>
+  <packages href="../../component_models/models/raw_script_server.ros_package#/"/>
+  <packages href="../../component_models/models/robot_state_publisher.ros_package#/"/>
+  <packages href="../../component_models/models/youbot_oodl.ros_package#/"/>
+  <packages href="../../component_models/models/raw_fetch_and_carry.ros_package#/"/>
+  <packages href="../../component_models/models/object_manipulator.ros_package#/"/>
+</ros:Architecture>

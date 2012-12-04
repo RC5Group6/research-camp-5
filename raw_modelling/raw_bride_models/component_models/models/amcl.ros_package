@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ros:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ros="http://ros/1.0" name="amcl">
+  <node name="amcl">
+    <publisher name="amcl_pose"/>
+    <publisher name="tf"/>
+    <publisher name="particlecloud"/>
+    <subscriber name="initial_pose"/>
+    <subscriber name="tf"/>
+    <subscriber name="scan"/>
+    <parameter name="odom_model_type" value="omni" type="string"/>
+    <parameter name="odom_alpha1" value="7.0" type="double"/>
+    <parameter name="odom_alpha2" value="5.0" type="double"/>
+    <parameter name="odom_alpha3" value="5.0" type="double"/>
+    <parameter name="odom_alpha4" value="5.0" type="double"/>
+    <parameter name="odom_alpha5" value="7.0" type="double"/>
+    <parameter name="odom_frame_id" value="/odom" type="string"/>
+    <parameter name="base_frame_id" value="base_footprint" type="string"/>
+    <parameter name="global_frame_id" value="map" type="string"/>
+    <parameter name="min_particles" value="100"/>
+    <parameter name="max_particles" value="2000"/>
+    <parameter name="kld_err" value="0.01" type="double"/>
+    <parameter name="kld_z" value="0.99" type="double"/>
+    <parameter name="update_min_d" value="0.05" type="double"/>
+    <parameter name="update_min_a" value="0.01" type="double"/>
+    <parameter name="resample_interval" value="2"/>
+    <parameter name="transform_tolerance" value="0.1" type="double"/>
+    <parameter name="recovery_alpha_slow" value="0.0" type="double"/>
+    <parameter name="recovery_alpha_fast" value="0.0" type="double"/>
+    <parameter name="gui_publish_rate" value="-1"/>
+    <parameter name="first_map_only" value="1"/>
+    <parameter name="laser_min_range" value="0.04" type="double"/>
+    <parameter name="laser_max_range" value="5.0" type="double"/>
+    <parameter name="laser_max_beams" value="30"/>
+    <parameter name="laser_z_hit" value="0.95" type="double"/>
+    <parameter name="laser_z_short" value="0.01" type="double"/>
+    <parameter name="laser_z_max" value="0.05" type="double"/>
+    <parameter name="laser_z_rand" value="0.05" type="double"/>
+    <parameter name="laser_sigma_hit" value="0.2" type="double"/>
+    <parameter name="laser_lambda_short" value="0.1" type="double"/>
+    <parameter name="laser_likelihood_max_dist" value="1.0" type="double"/>
+    <parameter name="laser_model_type" value="likelihood_field" type="string"/>
+  </node>
+  <topic name="/tf" publisher="//@node.0/@publisher.1">
+    <subscriber href="raw_2dnav.ros_package#//@node.0/@subscriber.0"/>
+  </topic>
+</ros:Package>

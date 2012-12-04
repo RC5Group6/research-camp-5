@@ -1,0 +1,14 @@
+<package>
+  <description brief="raw_bride_models">
+
+     raw_bride_models
+
+  </description>
+  <author>Frederik Hegger</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/raw_bride_models</url>
+
+</package>
+
+

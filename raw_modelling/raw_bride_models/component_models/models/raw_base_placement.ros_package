@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ros:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ros="http://ros/1.0" name="raw_base_placement">
+  <node name="placement_wrt_workspace_action_server">
+    <publisher name="cmd_vel"/>
+    <serviceClient name="scan_front_linearregression"/>
+    <actionserver name="raw_base_placement/adjust_to_workspace"/>
+  </node>
+  <node name="placement_wrt_workspace_service_server">
+    <subscriber name="scan_front"/>
+    <serviceServer name="scan_front_linearregression"/>
+  </node>
+  <topic name="/cmd_vel" publisher="//@node.0/@publisher.0">
+    <subscriber href="youbot_oodl.ros_package#//@node.0/@subscriber.0"/>
+  </topic>
+  <service name="/raw_base_placement/scan_front_linearregression" serviceserver="//@node.1/@serviceServer.0" serviceclient="//@node.0/@serviceClient.0"/>
+  <action name="/raw_base_placement/adjust_to_workspace" actionserver="//@node.0/@actionserver.0">
+    <actionclient href="raw_fetch_and_carry.ros_package#//@node.0/@actionclient.5"/>
+  </action>
+</ros:Package>

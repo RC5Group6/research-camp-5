@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ros:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ros="http://ros/1.0" name="object_manipulator">
+  <node name="cluster_bounding_box_finder_server">
+    <serviceServer name="/find_cluster_bounding_box"/>
+    <parameter name="z_up_frame" value="/base_link" type="string"/>
+  </node>
+  <service name="/find_cluster_bounding_box" serviceserver="//@node.0/@serviceServer.0">
+    <serviceclient href="raw_object_finder.ros_package#//@node.0/@serviceClient.0"/>
+  </service>
+</ros:Package>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ros:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ros="http://ros/1.0" name="raw_object_finder">
+  <node name="object_segmentation_node">
+    <subscriber name="camera/rgb/points"/>
+    <serviceClient name="/find_cluster_bounding_box"/>
+    <serviceServer name="/raw_perception/object_segmentation/get_segmented_objects"/>
+  </node>
+  <service name="/raw_perception/object_segmentation/get_segmented_objects" serviceserver="//@node.0/@serviceServer.0">
+    <serviceclient href="raw_fetch_and_carry.ros_package#//@node.0/@serviceClient.0"/>
+  </service>
+</ros:Package>

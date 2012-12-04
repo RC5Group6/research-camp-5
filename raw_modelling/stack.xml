@@ -1,0 +1,9 @@
+<stack>
+  <description brief="raw_modelling">raw_modelling</description>
+  <author>Maintained by Frederik Hegger</author>
+  <license>BSD</license>  
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/raw_modelling</url>
+  <depend stack="ros" />
+
+</stack>
