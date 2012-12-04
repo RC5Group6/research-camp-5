@@ -29,8 +29,8 @@ class SimpleIkSolver:
 		rospy.Subscriber('/joint_states', sensor_msgs.msg.JointState, self.joint_states_callback)
 		
 		rospy.loginfo("Waiting for 'get_constraint_aware_ik' service")
-		rospy.wait_for_service('/youbot_arm_kinematics/get_constraint_aware_ik')
-		self.ciks = rospy.ServiceProxy('/youbot_arm_kinematics/get_constraint_aware_ik', kinematics_msgs.srv.GetConstraintAwarePositionIK)
+		rospy.wait_for_service('/arm_kinematics_constraint_aware/get_constraint_aware_ik')
+		self.ciks = rospy.ServiceProxy('/arm_kinematics_constraint_aware/get_constraint_aware_ik', kinematics_msgs.srv.GetConstraintAwarePositionIK)
 		rospy.loginfo("Service 'get_constraint_aware_ik' is ready")
 		
 		rospy.loginfo("Waiting for 'set_planning_scene_diff' service")

@@ -38,7 +38,7 @@ INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/common/src)
 #target_link_libraries(example ${PROJECT_NAME})
 
 # for every node that is executable we have to generate a line like:
-rosbuild_add_executable(object_segmentation ros/src/object_segmentation_ros.cpp) 
+rosbuild_add_executable(object_segmentation_node ros/src/object_segmentation_ros.cpp) 
 
 # protected region user Cmake macros on begin #
 rosbuild_add_library(raw_object_segmentation

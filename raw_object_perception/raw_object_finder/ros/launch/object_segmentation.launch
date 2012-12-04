@@ -9,6 +9,6 @@
 	</node>
 
 	<!-- object segmentation -->
-	<node pkg="raw_object_finder" type="object_segmentation" name="object_segmentation" ns="raw_perception/object_segmentation" output="screen" />
+	<node pkg="raw_object_finder" type="object_segmentation_node" name="object_segmentation" ns="raw_perception/object_segmentation" output="screen" />
 
 </launch>
