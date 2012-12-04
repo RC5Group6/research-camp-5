@@ -19,12 +19,12 @@
     <subscriber href="youbot_oodl.ros_package#//@node.0/@subscriber.3"/>
   </topic>
   <action name="/arm_1/arm_controller/MoveToJointConfigurationDirect" actionserver="//@node.0/@actionserver.1">
-    <actionclient href="raw_fetch_and_carry.ros_package#//@node.0/@actionclient.4"/>
-  </action>
-  <action name="/arm_1/arm_controller/MoveToCartesianRPYSampledDirect" actionserver="//@node.0/@actionserver.0">
     <actionclient href="raw_fetch_and_carry.ros_package#//@node.0/@actionclient.3"/>
   </action>
-  <action name="/arm_1/gripper_controller/MoveToJointConfigurationDirect" actionserver="//@node.1/@actionserver.0">
+  <action name="/arm_1/arm_controller/MoveToCartesianRPYSampledDirect" actionserver="//@node.0/@actionserver.0">
     <actionclient href="raw_fetch_and_carry.ros_package#//@node.0/@actionclient.2"/>
+  </action>
+  <action name="/arm_1/gripper_controller/MoveToJointConfigurationDirect" actionserver="//@node.1/@actionserver.0">
+    <actionclient href="raw_fetch_and_carry.ros_package#//@node.0/@actionclient.1"/>
   </action>
 </ros:Package>

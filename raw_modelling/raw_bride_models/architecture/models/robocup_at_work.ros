@@ -9,10 +9,14 @@
   <packages href="../../component_models/models/raw_2dnav.ros_package#/"/>
   <packages href="../../component_models/models/raw_arm_navigation.ros_package#/"/>
   <packages href="../../component_models/models/raw_base_placement.ros_package#/"/>
-  <packages href="../../component_models/models/raw_object_finder.ros_package#/"/>
   <packages href="../../component_models/models/raw_script_server.ros_package#/"/>
   <packages href="../../component_models/models/robot_state_publisher.ros_package#/"/>
   <packages href="../../component_models/models/youbot_oodl.ros_package#/"/>
   <packages href="../../component_models/models/raw_fetch_and_carry.ros_package#/"/>
-  <packages href="../../component_models/models/object_manipulator.ros_package#/"/>
+  <packages href="../../brics_3d_bride_filtering_octree/model/brics_3d_octree_filter.ros_package#/"/>
+  <packages href="../../brics_3d_bride_filtering_roi/model/brics_3d_filter_roi.ros_package#/"/>
+  <packages href="../../brics_3d_bride_segmentation/model/brics_3d_segmentation.ros_package#/"/>
+  <packages href="../../brics_3d_bride_utils/model/brics_3d_for_each.ros_package#/"/>
+  <packages href="../../brics_3d_bride_feature_extraction/model/pca_extraction.ros_package#/"/>
+  <packages href="../../brics_3d_scene_model/model/scene_model.ros_package#/"/>
 </ros:Architecture>

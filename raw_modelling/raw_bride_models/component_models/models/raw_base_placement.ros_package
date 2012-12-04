@@ -14,6 +14,6 @@
   </topic>
   <service name="/raw_base_placement/scan_front_linearregression" serviceserver="//@node.1/@serviceServer.0" serviceclient="//@node.0/@serviceClient.0"/>
   <action name="/raw_base_placement/adjust_to_workspace" actionserver="//@node.0/@actionserver.0">
-    <actionclient href="raw_fetch_and_carry.ros_package#//@node.0/@actionclient.5"/>
+    <actionclient href="raw_fetch_and_carry.ros_package#//@node.0/@actionclient.4"/>
   </action>
 </ros:Package>

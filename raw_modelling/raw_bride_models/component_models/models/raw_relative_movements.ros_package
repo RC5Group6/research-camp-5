@@ -8,7 +8,5 @@
   <topic name="/cmd_vel" publisher="//@node.0/@publisher.0">
     <subscriber href="youbot_oodl.ros_package#//@node.0/@subscriber.0"/>
   </topic>
-  <service name="/raw_relative_movements/move_base_relative" serviceserver="//@node.0/@serviceServer.0">
-    <serviceclient href="raw_fetch_and_carry.ros_package#//@node.0/@serviceClient.1"/>
-  </service>
+  <service name="/raw_relative_movements/move_base_relative" serviceserver="//@node.0/@serviceServer.0"/>
 </ros:Package>
