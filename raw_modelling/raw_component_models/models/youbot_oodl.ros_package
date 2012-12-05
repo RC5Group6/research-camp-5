@@ -2,7 +2,8 @@
 <ros:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ros="http://ros/1.0" name="youbot_oodl">
   <node name="youbot_oodl">
     <publisher name="odom"/>
-    <publisher name="joint_states"/>
+    <publisher name="/base/joint_states"/>
+    <publisher name="/arm_1/joint_states"/>
     <subscriber name="cmd_vel"/>
     <subscriber name="arm_1/arm_controller/position_command" eventHandler=""/>
     <subscriber name="arm_1/arm_controller/velocity_command"/>
@@ -31,5 +32,8 @@
   </topic>
   <topic name="/joint_states" publisher="//@node.0/@publisher.1">
     <subscriber href="planning_environment.ros_package#//@node.0/@subscriber.1"/>
+  </topic>
+  <topic name="/joint_states" publisher="//@node.0/@publisher.2">
+    <subscriber href="robot_state_publisher.ros_package#//@node.0/@subscriber.0"/>
   </topic>
 </ros:Package>

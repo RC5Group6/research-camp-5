@@ -138,6 +138,7 @@
  		<remap from="tf" to="/tf"/> 
  		<remap from="tf" to="/tf"/> 
 		<remap from="joint_states" to="/joint_states"/>
+		<remap from="joint_states" to="/joint_states"/>
 	</node>
 	
 	<node pkg="youbot_oodl" type="youbot_oodl" name="youbot_oodl" output="screen">
@@ -146,15 +147,16 @@
 		<remap from="arm_1/gripper_controller/position_command" to="/arm_1/gripper_controller/position_command"/>
 		<remap from="cmd_vel" to="/cmd_vel"/>
  		<remap from="odom" to="/odom"/> 
- 		<remap from="joint_states" to="/joint_states"/> 
+ 		<remap from="/base/joint_states" to="/joint_states"/> 
  		<remap from="odom" to="/odom"/> 
- 		<remap from="joint_states" to="/joint_states"/> 
- 		<remap from="joint_states" to="/joint_states"/> 
- 		<remap from="joint_states" to="/joint_states"/> 
- 		<remap from="joint_states" to="/joint_states"/> 
- 		<remap from="joint_states" to="/joint_states"/> 
+ 		<remap from="/base/joint_states" to="/joint_states"/> 
+ 		<remap from="/base/joint_states" to="/joint_states"/> 
+ 		<remap from="/base/joint_states" to="/joint_states"/> 
+ 		<remap from="/base/joint_states" to="/joint_states"/> 
+ 		<remap from="/base/joint_states" to="/joint_states"/> 
+ 		<remap from="/arm_1/joint_states" to="/joint_states"/> 
 	</node>
-	
+
 	
 	<node pkg="brics_3d_bride_filtering_octree" type="OctreeFilter" name="OctreeFilter" output="screen">
  		<remap from="outputPointCloud" to="subsampled_cloud"/> 

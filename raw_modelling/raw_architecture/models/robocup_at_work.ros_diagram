@@ -429,6 +429,14 @@
             <element xmi:type="ros:Subscriber" href="platform:/resource/component_models/models/youbot_oodl.ros_package#//@node.0/@subscriber.3"/>
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DkR2Oz1yEeKKBcm3JaBEvA" x="-1" y="1"/>
           </children>
+          <children xmi:type="notation:Node" xmi:id="_-kQZ8D7GEeKA6KSfT1HU6A" type="3003">
+            <children xmi:type="notation:DecorationNode" xmi:id="_-kRBAD7GEeKA6KSfT1HU6A" type="5002"/>
+            <styles xmi:type="notation:DescriptionStyle" xmi:id="_-kQZ8T7GEeKA6KSfT1HU6A"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_-kQZ8j7GEeKA6KSfT1HU6A" fontName="Ubuntu"/>
+            <styles xmi:type="notation:LineStyle" xmi:id="_-kQZ8z7GEeKA6KSfT1HU6A"/>
+            <element xmi:type="ros:Publisher" href="platform:/resource/component_models/models/youbot_oodl.ros_package#//@node.0/@publisher.2"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-kQZ9D7GEeKA6KSfT1HU6A" x="239" y="61"/>
+          </children>
           <element xmi:type="ros:Node" href="platform:/resource/component_models/models/youbot_oodl.ros_package#//@node.0"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DkQBAT1yEeKKBcm3JaBEvA"/>
         </children>
@@ -937,7 +945,7 @@
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="_rt1TkD1zEeKKBcm3JaBEvA" type="4001" source="_DkRPJj1yEeKKBcm3JaBEvA" target="_hU0RVj1zEeKKBcm3JaBEvA">
       <children xmi:type="notation:DecorationNode" xmi:id="_rt16oD1zEeKKBcm3JaBEvA" type="6001">
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_rt16oT1zEeKKBcm3JaBEvA" y="40"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_rt16oT1zEeKKBcm3JaBEvA" x="-43" y="-52"/>
       </children>
       <styles xmi:type="notation:FontStyle" xmi:id="_rt1TkT1zEeKKBcm3JaBEvA" fontName="Sans"/>
       <element xmi:type="ros:Topic" href="platform:/resource/component_models/models/youbot_oodl.ros_package#//@topic.5"/>
@@ -1130,6 +1138,15 @@
       <element xmi:type="ros:Topic" href="platform:/resource/component_models/models/openni_camera.ros_package#//@topic.1"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_UejR0j4pEeKrVv0oliZXFg" points="[19, 15, -88, -70]$[108, 75, 1, -10]"/>
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_UemVID4pEeKrVv0oliZXFg" id="(0.24347826086956523,0.35)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_H2G_0D7HEeKA6KSfT1HU6A" type="4001" source="_-kQZ8D7GEeKA6KSfT1HU6A" target="_hU0RVj1zEeKKBcm3JaBEvA">
+      <children xmi:type="notation:DecorationNode" xmi:id="_H2IN8D7HEeKA6KSfT1HU6A" type="6001">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_H2IN8T7HEeKA6KSfT1HU6A" x="-5" y="12"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_H2Hm4D7HEeKA6KSfT1HU6A" fontName="Ubuntu"/>
+      <element xmi:type="ros:Topic" href="platform:/resource/component_models/models/youbot_oodl.ros_package#//@topic.8"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_H2Hm4T7HEeKA6KSfT1HU6A" points="[23, 5, -206, -39]$[233, 59, 4, 15]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_H2LRQD7HEeKA6KSfT1HU6A" id="(0.7596899224806202,0.45)"/>
     </edges>
   </notation:Diagram>
   <notation:Diagram xmi:id="_M7a2oD1wEeKmre5Uf4zF5g" type="RosPackage" measurementUnit="Pixel">

@@ -55,6 +55,14 @@
       <element xmi:type="ros:Publisher" href="youbot_oodl.ros_package#//@node.0/@publisher.1"/>
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_f95HND1eEeKpucSawVz5mQ" x="239" y="108"/>
     </children>
+    <children xmi:type="notation:Node" xmi:id="_7MIAgD7GEeKA6KSfT1HU6A" type="3004">
+      <children xmi:type="notation:DecorationNode" xmi:id="_7MJOoD7GEeKA6KSfT1HU6A" type="5004"/>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_7MIAgT7GEeKA6KSfT1HU6A"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_7MIAgj7GEeKA6KSfT1HU6A" fontName="Ubuntu"/>
+      <styles xmi:type="notation:LineStyle" xmi:id="_7MIAgz7GEeKA6KSfT1HU6A"/>
+      <element xmi:type="ros:Publisher" href="youbot_oodl.ros_package#//@node.0/@publisher.2"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7MIAhD7GEeKA6KSfT1HU6A" x="239" y="168"/>
+    </children>
     <element xmi:type="ros:Node" href="youbot_oodl.ros_package#//@node.0"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tMiywTSrEeK3ksCBOi5kZA" x="324" y="24" width="216" height="265"/>
   </children>
