@@ -24,6 +24,10 @@
 	<!--- Run map_server -->
 	<node name="map_server" pkg="map_server" type="map_server" args="$(arg map)"/>
 
+<!-- load the robot description file -->
+	<param name="robot_description" command="$(find xacro)/xacro.py '$(find raw_hardware_config)/$(env ROBOT)/urdf/$(env ROBOT).urdf.xacro'"/>
+
+
 <!-- protected region additional custom Launchfile statements in the beginning end -->
   
 
@@ -84,9 +88,6 @@
  		<remap from="scan" to="/scan_front"/> 
 	</node>
 	
-	<node pkg="map_server" type="map_server" name="map_server" output="screen">
- 		<remap from="map" to="/map"/> 
-	</node>
 	
 	<node pkg="openni_camera" type="openni_node" name="openni_node" output="screen">
  		<remap from="camera/rgb/points" to="/camera/rgb/points"/> 
@@ -111,12 +112,12 @@
 		<remap from="odom" to="/odom"/>
 	</node>
 	
-	<node pkg="raw_arm_navigation" type="arm_action_server" name="arm_action_server" output="screen">
+	<node pkg="raw_arm_navigation" type="arm_action_server" name="arm_action_server" output="screen" ns="/arm_1/arm_controller">
  		<remap from="arm_1/arm_controller/position_command" to="/arm_1/arm_controller/position_command"/> 
 		<remap from="joint_states" to="/joint_states"/>
 	</node>
 	
-	<node pkg="raw_arm_navigation" type="gripper_action_server" name="gripper_action_server" output="screen">
+	<node pkg="raw_arm_navigation" type="gripper_action_server" name="gripper_action_server" output="screen" ns="/arm_1/gripper_controller">
  		<remap from="/arm_1/gripper_controller/position_command" to="/arm_1/gripper_controller/position_command"/> 
 		<remap from="joint_states" to="/joint_states"/>
 	</node>
@@ -154,8 +155,6 @@
  		<remap from="joint_states" to="/joint_states"/> 
 	</node>
 	
-	<node pkg="raw_fetch_and_carry" type="fetch_and_carry" name="fetch_and_carry" output="screen">
-	</node>
 	
 	<node pkg="brics_3d_bride_filtering_octree" type="OctreeFilter" name="OctreeFilter" output="screen">
  		<remap from="outputPointCloud" to="subsampled_cloud"/> 
