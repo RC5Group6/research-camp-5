@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ros:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ros="http://ros/1.0" name="arm_kinematics_constraint_aware">
+  <node name="arm_kinematics_constraint_aware">
+    <subscriber name="joint_states"/>
+    <serviceServer name="get_ik"/>
+    <parameter name="group" value="arm" type="string"/>
+    <parameter name="use_monitor" value="true" type="bool"/>
+    <parameter name="use_collision_map" value="false" type="bool"/>
+    <parameter name="search_discretization" value="6.2832" type="double"/>
+    <actionserver name="/arm_kinematics_constraint_aware/sync_planning_scene"/>
+  </node>
+  <action name="/arm_kinematics_constraint_aware/sync_planning_scene" actionserver="//@node.0/@actionserver.0">
+    <actionclient href="planning_environment.ros_package#//@node.0/@actionclient.0"/>
+  </action>
+</ros:Package>

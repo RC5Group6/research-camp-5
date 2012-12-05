@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:ros="http://ros/1.0" xmi:id="_4bsuUD1oEeK8x4SBK7MEmA" type="RosPackage" name="openni_camera.ros_package_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_Cu-U8D1pEeK8x4SBK7MEmA" type="2001" fontName="Sans">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Cu-8AD1pEeK8x4SBK7MEmA" type="5008"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_Cu-8AT1pEeK8x4SBK7MEmA" type="7001">
+      <children xmi:type="notation:Node" xmi:id="_K6MmgD4EEeKwAIXBTddnSw" type="3001">
+        <element xmi:type="ros:Parameter" href="openni_camera.ros_package#//@node.0/@parameter.0"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_K6MmgT4EEeKwAIXBTddnSw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_OMgr0D4EEeKwAIXBTddnSw" type="3001">
+        <element xmi:type="ros:Parameter" href="openni_camera.ros_package#//@node.0/@parameter.1"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_OMgr0T4EEeKwAIXBTddnSw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_TloFkD4EEeKwAIXBTddnSw" type="3001">
+        <element xmi:type="ros:Parameter" href="openni_camera.ros_package#//@node.0/@parameter.2"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_TloFkT4EEeKwAIXBTddnSw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_V4CNED4EEeKwAIXBTddnSw" type="3001">
+        <element xmi:type="ros:Parameter" href="openni_camera.ros_package#//@node.0/@parameter.3"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_V4CNET4EEeKwAIXBTddnSw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_Z75EED4EEeKwAIXBTddnSw" type="3001">
+        <element xmi:type="ros:Parameter" href="openni_camera.ros_package#//@node.0/@parameter.4"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Z75EET4EEeKwAIXBTddnSw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_c8ixoD4EEeKwAIXBTddnSw" type="3001">
+        <element xmi:type="ros:Parameter" href="openni_camera.ros_package#//@node.0/@parameter.5"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_c8ixoT4EEeKwAIXBTddnSw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_gKnQID4EEeKwAIXBTddnSw" type="3001">
+        <element xmi:type="ros:Parameter" href="openni_camera.ros_package#//@node.0/@parameter.6"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_gKnQIT4EEeKwAIXBTddnSw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_lFaWMD4EEeKwAIXBTddnSw" type="3001">
+        <element xmi:type="ros:Parameter" href="openni_camera.ros_package#//@node.0/@parameter.7"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_lFaWMT4EEeKwAIXBTddnSw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_m3UYsD4EEeKwAIXBTddnSw" type="3001">
+        <element xmi:type="ros:Parameter" href="openni_camera.ros_package#//@node.0/@parameter.8"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_m3UYsT4EEeKwAIXBTddnSw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_oxxTMD4EEeKwAIXBTddnSw" type="3001">
+        <element xmi:type="ros:Parameter" href="openni_camera.ros_package#//@node.0/@parameter.9"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_oxxTMT4EEeKwAIXBTddnSw"/>
+      </children>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_Cu-8Aj1pEeK8x4SBK7MEmA" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_Cu-8Az1pEeK8x4SBK7MEmA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_Cu-8BD1pEeK8x4SBK7MEmA"/>
+    </children>
+    <element xmi:type="ros:Node" href="openni_camera.ros_package#//@node.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Cu-U8T1pEeK8x4SBK7MEmA" x="144" y="12"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_4bsuUT1oEeK8x4SBK7MEmA"/>
+  <element xmi:type="ros:Package" href="openni_camera.ros_package#/"/>
+</notation:Diagram>

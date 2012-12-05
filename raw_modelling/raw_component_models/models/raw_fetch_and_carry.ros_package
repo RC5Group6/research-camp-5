@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ros:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ros="http://ros/1.0" name="raw_fetch_and_carry">
+  <node name="fetch_and_carry">
+    <serviceClient name="get_segmented_objects"/>
+    <actionclient name="/move_base_simple"/>
+    <actionclient name="/arm_1/gripper_controller/MoveToJointConfigurationDirect"/>
+    <actionclient name="/arm_1/arm_controller/MoveToCartesianRPYSampledDirect"/>
+    <actionclient name="/arm_1/arm_controller/MoveToJointConfigurationDirect"/>
+    <actionclient name="/raw_base_placement/adjust_to_workspace"/>
+  </node>
+</ros:Package>

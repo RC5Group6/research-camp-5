@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:ros="http://ros/1.0" xmi:id="_P5Uq0D1zEeKKBcm3JaBEvA" type="RosPackage" name="robot_state_publisher.ros_package_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_QSCs0D1zEeKKBcm3JaBEvA" type="2001" fontName="Sans">
+    <children xmi:type="notation:DecorationNode" xmi:id="_QSCs0j1zEeKKBcm3JaBEvA" type="5008"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_QSCs0z1zEeKKBcm3JaBEvA" type="7001">
+      <styles xmi:type="notation:TitleStyle" xmi:id="_QSCs1D1zEeKKBcm3JaBEvA" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_QSCs1T1zEeKKBcm3JaBEvA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_QSCs1j1zEeKKBcm3JaBEvA"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_bW-Z4D1zEeKKBcm3JaBEvA" type="3007">
+      <children xmi:type="notation:DecorationNode" xmi:id="_bW_A8D1zEeKKBcm3JaBEvA" type="5007"/>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_bW-Z4T1zEeKKBcm3JaBEvA"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_bW-Z4j1zEeKKBcm3JaBEvA" fontName="Sans"/>
+      <styles xmi:type="notation:LineStyle" xmi:id="_bW-Z4z1zEeKKBcm3JaBEvA"/>
+      <element xmi:type="ros:Subscriber" href="robot_state_publisher.ros_package#//@node.0/@subscriber.0"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bW-Z5D1zEeKKBcm3JaBEvA"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_d7ioYD1zEeKKBcm3JaBEvA" type="3004">
+      <children xmi:type="notation:DecorationNode" xmi:id="_d7jPcD1zEeKKBcm3JaBEvA" type="5004"/>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_d7ioYT1zEeKKBcm3JaBEvA"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_d7ioYj1zEeKKBcm3JaBEvA" fontName="Sans"/>
+      <styles xmi:type="notation:LineStyle" xmi:id="_d7ioYz1zEeKKBcm3JaBEvA"/>
+      <element xmi:type="ros:Publisher" href="robot_state_publisher.ros_package#//@node.0/@publisher.0"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_d7ioZD1zEeKKBcm3JaBEvA"/>
+    </children>
+    <element xmi:type="ros:Node" href="robot_state_publisher.ros_package#//@node.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QSCs0T1zEeKKBcm3JaBEvA" x="432" y="180"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_P5Uq0T1zEeKKBcm3JaBEvA"/>
+  <element xmi:type="ros:Package" href="robot_state_publisher.ros_package#/"/>
+</notation:Diagram>

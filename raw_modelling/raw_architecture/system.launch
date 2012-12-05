@@ -1,0 +1,207 @@
+<launch>
+<!-- protected region additional custom Launchfile statements in the beginning on begin -->
+	<include file="$(find raw_default_env_config)/upload_param.launch" />
+	
+	<rosparam command="load" ns="robot_description_planning" file="$(find youbot_arm_navigation)/ros/config/collision_checks.yaml" />
+	<rosparam command="load" ns="robot_description_planning" file="$(find youbot_arm_navigation)/ros/config/multi_dof_joints.yaml" />
+	<rosparam command="load" ns="robot_description_planning" file="$(find youbot_arm_navigation)/ros/config/planning_groups.yaml" />
+
+	<rosparam command="load" ns="arm_kinematics_constraint_aware" file="$(find youbot_arm_navigation)/ros/config/robot_padding.yaml" />
+	<rosparam command="load" ns="arm_kinematics_constraint_aware" file="$(find youbot_arm_navigation)/ros/config/arm_kinematics.yaml" />
+
+	<rosparam command="load" ns="move_base_adapted" file="$(find raw_2dnav)/ros/config/move_base_params.yaml" />
+	<rosparam command="load" ns="move_base_adapted/global_costmap" file="$(find raw_2dnav)/ros/config/costmap_common_params.yaml" />
+	<rosparam command="load" ns="move_base_adapted/local_costmap" file="$(find raw_2dnav)/ros/config/costmap_common_params.yaml" />
+	<rosparam command="load" ns="move_base_adapted" file="$(find raw_2dnav)/ros/config/local_costmap_params.yaml" />
+	<rosparam command="load" ns="move_base_adapted" file="$(find raw_2dnav)/ros/config/global_costmap_params.yaml" />
+	<rosparam command="load" ns="move_base_adapted/TrajectoryPlannerROS" file="$(find raw_2dnav)/ros/config/base_local_planner_params.yaml" />
+
+	<rosparam command="load" ns="openni_node" file="$(find openni_camera)/info/openni_params.yaml" />
+
+	<rosparam command="load" file="$(find raw_config)/cfg/$(env ROBOT)/missing.yaml" />
+
+	<arg name="map" default="$(find raw_default_env_config)/$(env ROBOT_ENV)/map.yaml" />
+	<!--- Run map_server -->
+	<node name="map_server" pkg="map_server" type="map_server" args="$(arg map)"/>
+
+<!-- protected region additional custom Launchfile statements in the beginning end -->
+  
+
+	<node pkg="amcl" type="amcl" name="amcl" output="screen">
+ 		<remap from="tf" to="/tf"/> 
+		<remap from="scan" to="/scan_front"/>
+		<param name="odom_model_type" value="omni"/>
+		<param name="odom_alpha1" value="7.0"/>
+		<param name="odom_alpha2" value="5.0"/>
+		<param name="odom_alpha3" value="5.0"/>
+		<param name="odom_alpha4" value="5.0"/>
+		<param name="odom_alpha5" value="7.0"/>
+		<param name="odom_frame_id" value="/odom"/>
+		<param name="base_frame_id" value="base_footprint"/>
+		<param name="global_frame_id" value="map"/>
+		<param name="min_particles" value="100"/>
+		<param name="max_particles" value="2000"/>
+		<param name="kld_err" value="0.01"/>
+		<param name="kld_z" value="0.99"/>
+		<param name="update_min_d" value="0.05"/>
+		<param name="update_min_a" value="0.01"/>
+		<param name="resample_interval" value="2"/>
+		<param name="transform_tolerance" value="0.1"/>
+		<param name="recovery_alpha_slow" value="0.0"/>
+		<param name="recovery_alpha_fast" value="0.0"/>
+		<param name="gui_publish_rate" value="-1"/>
+		<param name="first_map_only" value="1"/>
+		<param name="laser_min_range" value="0.04"/>
+		<param name="laser_max_range" value="5.0"/>
+		<param name="laser_max_beams" value="30"/>
+		<param name="laser_z_hit" value="0.95"/>
+		<param name="laser_z_short" value="0.01"/>
+		<param name="laser_z_max" value="0.05"/>
+		<param name="laser_z_rand" value="0.05"/>
+		<param name="laser_sigma_hit" value="0.2"/>
+		<param name="laser_lambda_short" value="0.1"/>
+		<param name="laser_likelihood_max_dist" value="1.0"/>
+		<param name="laser_model_type" value="likelihood_field"/>
+	</node>
+	
+	<node pkg="arm_kinematics_constraint_aware" type="arm_kinematics_constraint_aware" name="arm_kinematics_constraint_aware" output="screen">
+		<remap from="joint_states" to="/joint_states"/>
+		<param name="group" value="arm"/>
+		<param name="use_monitor" value="true"/>
+		<param name="use_collision_map" value="false"/>
+		<param name="search_discretization" value="6.2832"/>
+	</node>
+	
+	<node pkg="planning_environment" type="environment_server" name="environment_server" output="screen">
+		<remap from="tf" to="/tf"/>
+		<remap from="joint_states" to="/joint_states"/>
+		<param name="use_monitor" value="true"/>
+		<param name="use_collision_map" value="false"/>
+	</node>
+	
+	<node pkg="hokuyo_node" type="hokuyo_node" name="hokuyo_node" output="screen">
+ 		<remap from="scan" to="/scan_front"/> 
+ 		<remap from="scan" to="/scan_front"/> 
+	</node>
+	
+	<node pkg="map_server" type="map_server" name="map_server" output="screen">
+ 		<remap from="map" to="/map"/> 
+	</node>
+	
+	<node pkg="openni_camera" type="openni_node" name="openni_node" output="screen">
+ 		<remap from="camera/rgb/points" to="/camera/rgb/points"/> 
+ 		<remap from="camera/rgb/points" to="/camera/rgb/points"/> 
+		<param name="device_id" value="#1"/>
+		<param name="rgb_frame_id" value="/openni_rgb_optical_frame"/>
+		<param name="depth_frame_id" value="/openni_depth_optical_frame"/>
+		<param name="use_indices" value="false"/>
+		<param name="depth_registration" value="true"/>
+		<param name="image_mode" value="2"/>
+		<param name="depth_mode" value="2"/>
+		<param name="debayering" value="2"/>
+		<param name="depth_time_offset" value="0"/>
+		<param name="image_time_offset" value="0"/>
+	</node>
+	
+	<node pkg="raw_2dnav" type="move_base_adapted" name="move_base_adapted" output="screen">
+		<remap from="tf" to="/tf"/>
+		<remap from="map" to="/map"/>
+ 		<remap from="cmd_vel" to="/cmd_vel"/> 
+		<remap from="tf" to="/tf"/>
+		<remap from="odom" to="/odom"/>
+	</node>
+	
+	<node pkg="raw_arm_navigation" type="arm_action_server" name="arm_action_server" output="screen">
+ 		<remap from="arm_1/arm_controller/position_command" to="/arm_1/arm_controller/position_command"/> 
+		<remap from="joint_states" to="/joint_states"/>
+	</node>
+	
+	<node pkg="raw_arm_navigation" type="gripper_action_server" name="gripper_action_server" output="screen">
+ 		<remap from="/arm_1/gripper_controller/position_command" to="/arm_1/gripper_controller/position_command"/> 
+		<remap from="joint_states" to="/joint_states"/>
+	</node>
+	
+	<node pkg="raw_base_placement" type="placement_wrt_workspace_action_server" name="placement_wrt_workspace_action_server" output="screen">
+ 		<remap from="cmd_vel" to="/cmd_vel"/> 
+	</node>
+	
+	<node pkg="raw_base_placement" type="placement_wrt_workspace_service_server" name="placement_wrt_workspace_service_server" output="screen">
+		<remap from="scan_front" to="/scan_front"/>
+	</node>
+	
+	<node pkg="raw_script_server" type="script_server" name="script_server" output="screen">
+	</node>
+	
+	<node pkg="robot_state_publisher" type="state_publisher" name="state_publisher" output="screen">
+ 		<remap from="tf" to="/tf"/> 
+ 		<remap from="tf" to="/tf"/> 
+ 		<remap from="tf" to="/tf"/> 
+		<remap from="joint_states" to="/joint_states"/>
+	</node>
+	
+	<node pkg="youbot_oodl" type="youbot_oodl" name="youbot_oodl" output="screen">
+		<remap from="cmd_vel" to="/cmd_vel"/>
+		<remap from="arm_1/arm_controller/position_command" to="/arm_1/arm_controller/position_command"/>
+		<remap from="arm_1/gripper_controller/position_command" to="/arm_1/gripper_controller/position_command"/>
+		<remap from="cmd_vel" to="/cmd_vel"/>
+ 		<remap from="odom" to="/odom"/> 
+ 		<remap from="joint_states" to="/joint_states"/> 
+ 		<remap from="odom" to="/odom"/> 
+ 		<remap from="joint_states" to="/joint_states"/> 
+ 		<remap from="joint_states" to="/joint_states"/> 
+ 		<remap from="joint_states" to="/joint_states"/> 
+ 		<remap from="joint_states" to="/joint_states"/> 
+ 		<remap from="joint_states" to="/joint_states"/> 
+	</node>
+	
+	<node pkg="raw_fetch_and_carry" type="fetch_and_carry" name="fetch_and_carry" output="screen">
+	</node>
+	
+	<node pkg="brics_3d_bride_filtering_octree" type="OctreeFilter" name="OctreeFilter" output="screen">
+ 		<remap from="outputPointCloud" to="subsampled_cloud"/> 
+		<remap from="inputPointCloud" to="roi_cloud"/>
+		<param name="octreeCellSize" value="0.01"/>
+	</node>
+	
+	<node pkg="brics_3d_bride_filtering_roi" type="ROIFilter" name="ROIFilter" output="screen">
+		<remap from="inputPointCloud" to="/camera/rgb/points"/>
+ 		<remap from="outputPointCloud" to="roi_cloud"/> 
+		<param name="min_x" value="-1"/>
+		<param name="max_x" value="2"/>
+		<param name="min_y" value="-1"/>
+		<param name="max_y" value="1"/>
+		<param name="min_z" value="0"/>
+		<param name="max_z" value="2"/>
+	</node>
+	
+	<node pkg="brics_3d_bride_segmentation" type="Segmentor" name="Segmentor" output="screen">
+ 		<remap from="pointCloudSegments" to="aggregated_segmants"/> 
+		<remap from="inputPointCloud" to="non_plane_points"/>
+	</node>
+	
+	<node pkg="brics_3d_bride_segmentation" type="DichotomySegmentor" name="DichotomySegmentor" output="screen">
+		<remap from="inputPointCloud" to="subsampled_cloud"/>
+ 		<remap from="outliers" to="non_plane_points"/> 
+	</node>
+	
+	<node pkg="brics_3d_bride_utils" type="ForEachSegment" name="ForEachSegment" output="screen">
+		<remap from="allSegments" to="aggregated_segmants"/>
+ 		<remap from="segment" to="segmented_objects"/> 
+	</node>
+	
+	<node pkg="brics_3d_bride_feature_extraction" type="PCAPoseEstimation" name="PCAPoseEstimation" output="screen">
+		<remap from="inputPointCloud" to="segmented_objects"/>
+ 		<remap from="estimatedPose" to="objects"/> 
+	</node>
+	
+	<node pkg="brics_3d_scene_model" type="scene_model" name="scene_model" output="screen">
+		<remap from="detected_poses" to="objects"/>
+	</node>
+	
+
+<!-- protected region additional custom Launchfile statements in the end of launch file on begin -->
+<!-- protected region additional custom Launchfile statements in the end of launch file end -->
+
+</launch>
+
+

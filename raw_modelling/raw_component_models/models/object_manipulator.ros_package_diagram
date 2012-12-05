@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:ros="http://ros/1.0" xmi:id="_k3kJoD4TEeKDUaCKlnNsSg" type="RosPackage" name="object_manipulator.ros_package_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_oJf0cD4TEeKDUaCKlnNsSg" type="2001" fontName="Sans">
+    <children xmi:type="notation:DecorationNode" xmi:id="_oJgbgD4TEeKDUaCKlnNsSg" type="5008"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_oJgbgT4TEeKDUaCKlnNsSg" type="7001">
+      <children xmi:type="notation:Node" xmi:id="_rKp4UD4TEeKDUaCKlnNsSg" type="3001">
+        <element xmi:type="ros:Parameter" href="object_manipulator.ros_package#//@node.0/@parameter.0"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_rKp4UT4TEeKDUaCKlnNsSg"/>
+      </children>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_oJgbgj4TEeKDUaCKlnNsSg" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_oJgbgz4TEeKDUaCKlnNsSg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_oJgbhD4TEeKDUaCKlnNsSg"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_E10O8D4UEeKDUaCKlnNsSg" type="3002">
+      <children xmi:type="notation:DecorationNode" xmi:id="_E102AD4UEeKDUaCKlnNsSg" type="5002"/>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_E10O8T4UEeKDUaCKlnNsSg"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_E10O8j4UEeKDUaCKlnNsSg" fontName="Sans"/>
+      <styles xmi:type="notation:LineStyle" xmi:id="_E10O8z4UEeKDUaCKlnNsSg"/>
+      <element xmi:type="ros:ServiceServer" href="object_manipulator.ros_package#//@node.0/@serviceServer.0"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E10O9D4UEeKDUaCKlnNsSg"/>
+    </children>
+    <element xmi:type="ros:Node" href="object_manipulator.ros_package#//@node.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oJf0cT4TEeKDUaCKlnNsSg" x="204" y="108"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_k3kwsD4TEeKDUaCKlnNsSg"/>
+  <element xmi:type="ros:Package" href="object_manipulator.ros_package#/"/>
+</notation:Diagram>

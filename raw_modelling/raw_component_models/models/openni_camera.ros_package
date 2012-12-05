@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ros:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ros="http://ros/1.0" name="openni_camera">
+  <node name="openni_node">
+    <publisher name="camera/rgb/points"/>
+    <parameter name="device_id" value="#1" type="string"/>
+    <parameter name="rgb_frame_id" value="/openni_rgb_optical_frame" type="string"/>
+    <parameter name="depth_frame_id" value="/openni_depth_optical_frame" type="string"/>
+    <parameter name="use_indices" value="false" type="bool"/>
+    <parameter name="depth_registration" value="true" type="bool"/>
+    <parameter name="image_mode" value="2"/>
+    <parameter name="depth_mode" value="2"/>
+    <parameter name="debayering" value="2"/>
+    <parameter name="depth_time_offset" value="0"/>
+    <parameter name="image_time_offset" value="0"/>
+  </node>
+  <topic name="/camera/rgb/points" publisher="//@node.0/@publisher.0">
+    <subscriber href="raw_object_finder.ros_package#//@node.0/@subscriber.0"/>
+  </topic>
+  <topic name="/camera/rgb/points" publisher="//@node.0/@publisher.0">
+    <subscriber href="../../brics_3d_bride_filtering_roi/model/brics_3d_filter_roi.ros_package#//@node.0/@subscriber.0"/>
+  </topic>
+</ros:Package>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:ros="http://ros/1.0" xmi:id="_npPoUD1pEeK8x4SBK7MEmA" type="RosPackage" name="raw_2dnav.ros_package_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_seW9ID1pEeK8x4SBK7MEmA" type="2001" fontName="Sans">
+    <children xmi:type="notation:DecorationNode" xmi:id="_seW9Ij1pEeK8x4SBK7MEmA" type="5008"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_seW9Iz1pEeK8x4SBK7MEmA" type="7001">
+      <styles xmi:type="notation:TitleStyle" xmi:id="_seW9JD1pEeK8x4SBK7MEmA" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_seW9JT1pEeK8x4SBK7MEmA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_seW9Jj1pEeK8x4SBK7MEmA"/>
+    </children>
+    <element xmi:type="ros:Node" href="raw_2dnav.ros_package#//@node.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_seW9IT1pEeK8x4SBK7MEmA" x="360" y="120"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_npPoUT1pEeK8x4SBK7MEmA"/>
+  <element xmi:type="ros:Package" href="raw_2dnav.ros_package#/"/>
+</notation:Diagram>

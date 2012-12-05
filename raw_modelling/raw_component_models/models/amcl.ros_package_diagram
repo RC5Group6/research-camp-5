@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:ros="http://ros/1.0" xmi:id="_1TqJ4D1pEeK8x4SBK7MEmA" type="RosPackage" name="amcl.ros_package_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_rs17AD31EeKHDKve_VkPnw" type="2001" fontName="Sans">
+    <children xmi:type="notation:DecorationNode" xmi:id="_rs17Aj31EeKHDKve_VkPnw" type="5008"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_rs2iED31EeKHDKve_VkPnw" type="7001">
+      <styles xmi:type="notation:TitleStyle" xmi:id="_rs2iET31EeKHDKve_VkPnw" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_rs2iEj31EeKHDKve_VkPnw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_rs2iEz31EeKHDKve_VkPnw"/>
+    </children>
+    <element xmi:type="ros:Node" href="amcl.ros_package#//@node.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rs17AT31EeKHDKve_VkPnw" x="384" y="84"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_1TqJ4T1pEeK8x4SBK7MEmA"/>
+  <element xmi:type="ros:Package" href="amcl.ros_package#/"/>
+</notation:Diagram>

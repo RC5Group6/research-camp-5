@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ros:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ros="http://ros/1.0" name="hokuyo_node">
+  <node name="hokuyo_node">
+    <publisher name="scan"/>
+  </node>
+  <topic name="/scan_front" publisher="//@node.0/@publisher.0">
+    <subscriber href="amcl.ros_package#//@node.0/@subscriber.2"/>
+  </topic>
+  <topic name="/scan_front" publisher="//@node.0/@publisher.0">
+    <subscriber href="raw_base_placement.ros_package#//@node.1/@subscriber.0"/>
+  </topic>
+</ros:Package>

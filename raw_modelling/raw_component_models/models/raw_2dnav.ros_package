@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ros:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ros="http://ros/1.0" name="raw_2dnav">
+  <node name="move_base_adapted">
+    <publisher name="cmd_vel"/>
+    <subscriber name="tf"/>
+    <subscriber name="odom"/>
+    <subscriber name="map"/>
+    <actionserver name="move_base_simple"/>
+  </node>
+  <topic name="/cmd_vel" publisher="//@node.0/@publisher.0">
+    <subscriber href="youbot_oodl.ros_package#//@node.0/@subscriber.0"/>
+  </topic>
+  <action name="/move_base_simple" actionserver="//@node.0/@actionserver.0">
+    <actionclient href="raw_fetch_and_carry.ros_package#//@node.0/@actionclient.0"/>
+  </action>
+</ros:Package>
