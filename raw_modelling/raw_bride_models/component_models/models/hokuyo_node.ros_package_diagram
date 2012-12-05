@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:ros="http://ros/1.0" xmi:id="_KF-XsD1pEeK8x4SBK7MEmA" type="RosPackage" name="hokuyo_node.ros_package_diagram" measurementUnit="Pixel">
-  <styles xmi:type="notation:DiagramStyle" xmi:id="_KF-XsT1pEeK8x4SBK7MEmA"/>
-  <element xmi:type="ros:Package" href="hokuyo_node.ros_package#/"/>
-</notation:Diagram>

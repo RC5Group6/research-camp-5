@@ -39,7 +39,7 @@ class PercieveObject(AbstractAction):
 
 class PercieveAction(AbstractAction):
     action_name = "execute_perception"
-    perception_service = '/raw_perception/object_segmentation/get_scene_objects'
+    perception_service = '/get_scene_objects'
 
     def __init__(self, actions):
         self.actions = actions
