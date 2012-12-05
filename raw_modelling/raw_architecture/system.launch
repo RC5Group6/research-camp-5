@@ -24,9 +24,6 @@
 	<!--- Run map_server -->
 	<node name="map_server" pkg="map_server" type="map_server" args="$(arg map)"/>
 
-<!-- load the robot description file -->
-	<param name="robot_description" command="$(find xacro)/xacro.py '$(find raw_hardware_config)/$(env ROBOT)/urdf/$(env ROBOT).urdf.xacro'"/>
-
 
 <!-- protected region additional custom Launchfile statements in the beginning end -->
   
@@ -83,26 +80,6 @@
 		<param name="use_collision_map" value="false"/>
 	</node>
 	
-	<node pkg="hokuyo_node" type="hokuyo_node" name="hokuyo_node" output="screen">
- 		<remap from="scan" to="/scan_front"/> 
- 		<remap from="scan" to="/scan_front"/> 
-	</node>
-	
-	
-	<node pkg="openni_camera" type="openni_node" name="openni_node" output="screen">
- 		<remap from="camera/rgb/points" to="/camera/rgb/points"/> 
- 		<remap from="camera/rgb/points" to="/camera/rgb/points"/> 
-		<param name="device_id" value="#1"/>
-		<param name="rgb_frame_id" value="/openni_rgb_optical_frame"/>
-		<param name="depth_frame_id" value="/openni_depth_optical_frame"/>
-		<param name="use_indices" value="false"/>
-		<param name="depth_registration" value="true"/>
-		<param name="image_mode" value="2"/>
-		<param name="depth_mode" value="2"/>
-		<param name="debayering" value="2"/>
-		<param name="depth_time_offset" value="0"/>
-		<param name="image_time_offset" value="0"/>
-	</node>
 	
 	<node pkg="raw_2dnav" type="move_base_adapted" name="move_base_adapted" output="screen">
 		<remap from="tf" to="/tf"/>
@@ -141,22 +118,6 @@
 		<remap from="joint_states" to="/joint_states"/>
 	</node>
 	
-	<node pkg="youbot_oodl" type="youbot_oodl" name="youbot_oodl" output="screen">
-		<remap from="cmd_vel" to="/cmd_vel"/>
-		<remap from="arm_1/arm_controller/position_command" to="/arm_1/arm_controller/position_command"/>
-		<remap from="arm_1/gripper_controller/position_command" to="/arm_1/gripper_controller/position_command"/>
-		<remap from="cmd_vel" to="/cmd_vel"/>
- 		<remap from="odom" to="/odom"/> 
- 		<remap from="/base/joint_states" to="/joint_states"/> 
- 		<remap from="odom" to="/odom"/> 
- 		<remap from="/base/joint_states" to="/joint_states"/> 
- 		<remap from="/base/joint_states" to="/joint_states"/> 
- 		<remap from="/base/joint_states" to="/joint_states"/> 
- 		<remap from="/base/joint_states" to="/joint_states"/> 
- 		<remap from="/base/joint_states" to="/joint_states"/> 
- 		<remap from="/arm_1/joint_states" to="/joint_states"/> 
-	</node>
-
 	
 	<node pkg="brics_3d_bride_filtering_octree" type="OctreeFilter" name="OctreeFilter" output="screen">
  		<remap from="outputPointCloud" to="subsampled_cloud"/> 
@@ -167,12 +128,12 @@
 	<node pkg="brics_3d_bride_filtering_roi" type="ROIFilter" name="ROIFilter" output="screen">
 		<remap from="inputPointCloud" to="/camera/rgb/points"/>
  		<remap from="outputPointCloud" to="roi_cloud"/> 
-		<param name="min_x" value="-1"/>
-		<param name="max_x" value="2"/>
+		<param name="min_x" value="0.4"/>
+		<param name="max_x" value="0.6"/>
 		<param name="min_y" value="-1"/>
 		<param name="max_y" value="1"/>
-		<param name="min_z" value="0"/>
-		<param name="max_z" value="2"/>
+		<param name="min_z" value="0.05"/>
+		<param name="max_z" value="0.3"/>
 	</node>
 	
 	<node pkg="brics_3d_bride_segmentation" type="Segmentor" name="Segmentor" output="screen">
